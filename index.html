@@ -1,32 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <title>Documents</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulaire Général d'Information</title>
   </head>
-  <body>
-    <article>
-      <header>
-        <h2>La planète Terre</h2>
-        <p>
-          Publié le mercredi
-          <time datetime="2017-10-04">4 octobre 2017</time> par Jeanne Smith
-        </p>
-      </header>
-      <p>Nous vivons sur une planète bleue et verte</p>
-      <p>
-        <a href="https://example.com/the-planet-earth/"
-          >Poursuivre la lecture…</a
-        >
-      </p>
-    </article>
-    <footer>
-      <p>Author: Hege Refsness</p>
-      <p><a href="mailto:hege@exemple.com">hege@example.com</a></p>
-    </footer>
 
-    <nav>
-      <a href="/html"></a>
-    </nav>
+  <body>
+    <h1>Formulaire Général d'Information</h1>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Identité</legend>
+
+        <label for="civilite">Civilité :</label>
+        <select id="civilite" name="civilite" required>
+          <option value="">--Choisissez--</option>
+          <option value="monsieur">Monsieur</option>
+          <option value="madame">Madame</option>
+          <option value="autre">Autre</option>
+        </select>
+        <br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required>
+        <br>
+
+        <label for="naissance">Date de naissance :</label>
+        <input type="date" id="naissance" name="naissance">
+        <br>
+
+        <label for="lieu_naissance">Lieu de naissance :</label>
+        <input type="text" id="lieu_naissance" name="lieu_naissance">
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Coordonnées</legend>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="tel">Téléphone :</label>
+        <input type="tel" id="tel" name="tel" pattern="[0-9]{10}" title="Entrez 10 chiffres">
+        <br>
+
+        <label for="adresse">Adresse :</label>
+        <input type="text" id="adresse" name="adresse">
+        <br>
+
+        <label for="ville">Ville :</label>
+        <input type="text" id="ville" name="ville">
+        <br>
+
+        <label for="code_postal">Code postal :</label>
+        <input type="text" id="code_postal" name="code_postal" pattern="[0-9]{5}" title="Entrez 5 chiffres">
+        <br>
+
+        <label for="pays">Pays :</label>
+        <input type="text" id="pays" name="pays">
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Informations diverses</legend>
+
+        <label for="pseudo">Pseudo préféré :</label>
+        <input type="text" id="pseudo" name="pseudo">
+        <br>
+
+        <label for="couleur">Couleur favorite :</label>
+        <input type="color" id="couleur" name="couleur">
+        <br>
+
+        <label for="siteweb">Site web personnel :</label>
+        <input type="url" id="siteweb" name="siteweb" placeholder="https://exemple.com">
+        <br>
+
+        <label for="satisfaction">Niveau de satisfaction (1 à 10) :</label>
+        <input type="range" id="satisfaction" name="satisfaction" min="1" max="10">
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Loisirs</legend>
+        <p>Quels sont vos loisirs ?</p>
+
+        <input type="checkbox" id="lecture" name="loisirs" value="lecture">
+        <label for="lecture">Lecture</label><br>
+
+        <input type="checkbox" id="sport" name="loisirs" value="sport">
+        <label for="sport">Sport</label><br>
+
+        <input type="checkbox" id="musique" name="loisirs" value="musique">
+        <label for="musique">Musique</label><br>
+
+        <input type="checkbox" id="voyage" name="loisirs" value="voyage">
+        <label for="voyage">Voyage</label><br>
+
+        <input type="checkbox" id="cinema" name="loisirs" value="cinema">
+        <label for="cinema">Cinéma</label><br>
+
+        <input type="checkbox" id="autre_loisir" name="loisirs" value="autre">
+        <label for="autre_loisir">Autre</label>
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Abonnement à la newsletter</legend>
+
+        <input type="radio" id="oui" name="newsletter" value="oui">
+        <label for="oui">Oui</label><br>
+
+        <input type="radio" id="non" name="newsletter" value="non">
+        <label for="non">Non</label>
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Téléversement de fichiers</legend>
+
+        <label for="cv">Téléverser votre CV :</label>
+        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
+        <br>
+
+        <label for="photo">Téléverser une photo :</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Commentaire libre</legend>
+
+        <label for="Commentaire">Votre message :</label><br>
+        <textarea id="Commentaire" name="Commentaire" rows="6" cols="60" placeholder="Écrivez ici votre commentaire..."></textarea>
+      </fieldset>
+
+      <br>
+
+      <input type="submit" value="Envoyer">
+      <input type="reset" value="Réinitialiser">
+    </form>
   </body>
 </html>
