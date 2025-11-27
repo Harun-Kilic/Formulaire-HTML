@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Formulaire Général d'Information</title>
   </head>
 
@@ -14,140 +14,159 @@
       <fieldset>
         <legend>Identité</legend>
 
-        <label for="civilite">Civilité :</label>
-        <select id="civilite" name="civilite" required>
-          <option value="">--Choisissez--</option>
-          <option value="monsieur">Monsieur</option>
-          <option value="madame">Madame</option>
-          <option value="autre">Autre</option>
-        </select>
-        <br>
+        <div class="form-group">
+          <label for="civilite">Civilité :</label>
+          <select id="civilite" name="civilite" required>
+            <option value="">--Choisissez--</option>
+            <option value="monsieur">Monsieur</option>
+            <option value="madame">Madame</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
 
-        <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" name="prenom" required>
-        <br>
+        <div class="form-group">
+          <label for="prenom">Prénom :</label>
+          <input type="text" id="prenom" name="prenom" autocomplete="given-name" required />
+        </div>
 
-        <label for="naissance">Date de naissance :</label>
-        <input type="date" id="naissance" name="naissance">
-        <br>
+        <div class="form-group">
+          <label for="naissance">Date de naissance :</label>
+          <input type="date" id="naissance" name="naissance" autocomplete="bday" />
+        </div>
 
-        <label for="lieu_naissance">Lieu de naissance :</label>
-        <input type="text" id="lieu_naissance" name="lieu_naissance">
+        <div class="form-group">
+          <label for="lieu_naissance">Lieu de naissance :</label>
+          <input type="text" id="lieu_naissance" name="lieu_naissance" />
+        </div>
       </fieldset>
-
-      <br>
 
       <fieldset>
         <legend>Coordonnées</legend>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
-        <br>
+        <div class="form-group">
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" autocomplete="email" required />
+        </div>
 
-        <label for="tel">Téléphone :</label>
-        <input type="tel" id="tel" name="tel" pattern="[0-9]{10}" title="Entrez 10 chiffres">
-        <br>
+        <div class="form-group">
+          <label for="tel">Téléphone :</label>
+          <input
+            type="tel"
+            id="tel"
+            name="tel"
+            pattern="[0-9]{10}"
+            title="Entrez 10 chiffres (ex : 0601020304)"
+            autocomplete="tel-national"
+          />
+        </div>
 
-        <label for="adresse">Adresse :</label>
-        <input type="text" id="adresse" name="adresse">
-        <br>
+        <div class="form-group">
+          <label for="adresse">Adresse :</label>
+          <input type="text" id="adresse" name="adresse" autocomplete="street-address" />
+        </div>
 
-        <label for="ville">Ville :</label>
-        <input type="text" id="ville" name="ville">
-        <br>
+        <div class="form-group">
+          <label for="ville">Ville :</label>
+          <input type="text" id="ville" name="ville" autocomplete="address-level2" />
+        </div>
 
-        <label for="code_postal">Code postal :</label>
-        <input type="text" id="code_postal" name="code_postal" pattern="[0-9]{5}" title="Entrez 5 chiffres">
-        <br>
+        <div class="form-group">
+          <label for="code_postal">Code postal :</label>
+          <input
+            type="text"
+            id="code_postal"
+            name="code_postal"
+            pattern="[0-9]{5}"
+            title="Entrez 5 chiffres"
+            autocomplete="postal-code"
+          />
+        </div>
 
-        <label for="pays">Pays :</label>
-        <input type="text" id="pays" name="pays">
+        <div class="form-group">
+          <label for="pays">Pays :</label>
+          <input type="text" id="pays" name="pays" autocomplete="country-name" />
+        </div>
       </fieldset>
-
-      <br>
 
       <fieldset>
         <legend>Informations diverses</legend>
 
-        <label for="pseudo">Pseudo préféré :</label>
-        <input type="text" id="pseudo" name="pseudo">
-        <br>
+        <div class="form-group">
+          <label for="pseudo">Pseudo préféré :</label>
+          <input type="text" id="pseudo" name="pseudo" />
+        </div>
 
-        <label for="couleur">Couleur favorite :</label>
-        <input type="color" id="couleur" name="couleur">
-        <br>
+        <div class="form-group">
+          <label for="couleur">Couleur favorite :</label>
+          <input type="color" id="couleur" name="couleur" class="input-small" />
+        </div>
 
-        <label for="siteweb">Site web personnel :</label>
-        <input type="url" id="siteweb" name="siteweb" placeholder="https://exemple.com">
-        <br>
+        <div class="form-group">
+          <label for="siteweb">Site web personnel :</label>
+          <input type="url" id="siteweb" name="siteweb" placeholder="https://exemple.com" />
+        </div>
 
-        <label for="satisfaction">Niveau de satisfaction (1 à 10) :</label>
-        <input type="range" id="satisfaction" name="satisfaction" min="1" max="10">
+        <div class="form-group">
+          <label for="satisfaction">Satisfaction (1 à 10) :</label>
+          <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" class="input-range" />
+        </div>
       </fieldset>
-
-      <br>
 
       <fieldset>
         <legend>Loisirs</legend>
         <p>Quels sont vos loisirs ?</p>
 
-        <input type="checkbox" id="lecture" name="loisirs" value="lecture">
-        <label for="lecture">Lecture</label><br>
-
-        <input type="checkbox" id="sport" name="loisirs" value="sport">
-        <label for="sport">Sport</label><br>
-
-        <input type="checkbox" id="musique" name="loisirs" value="musique">
-        <label for="musique">Musique</label><br>
-
-        <input type="checkbox" id="voyage" name="loisirs" value="voyage">
-        <label for="voyage">Voyage</label><br>
-
-        <input type="checkbox" id="cinema" name="loisirs" value="cinema">
-        <label for="cinema">Cinéma</label><br>
-
-        <input type="checkbox" id="autre_loisir" name="loisirs" value="autre">
-        <label for="autre_loisir">Autre</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="loisirs" value="lecture" /> Lecture</label>
+          <label><input type="checkbox" name="loisirs" value="sport" /> Sport</label>
+          <label><input type="checkbox" name="loisirs" value="musique" /> Musique</label>
+          <label><input type="checkbox" name="loisirs" value="voyage" /> Voyage</label>
+          <label><input type="checkbox" name="loisirs" value="cinema" /> Cinéma</label>
+          <label><input type="checkbox" name="loisirs" value="autre" /> Autre</label>
+        </div>
       </fieldset>
-
-      <br>
 
       <fieldset>
-        <legend>Abonnement à la newsletter</legend>
+        <legend>Abonnement newsletter</legend>
 
-        <input type="radio" id="oui" name="newsletter" value="oui">
-        <label for="oui">Oui</label><br>
-
-        <input type="radio" id="non" name="newsletter" value="non">
-        <label for="non">Non</label>
+        <div class="radio-group">
+          <label><input type="radio" name="newsletter" value="oui" /> Oui</label>
+          <label><input type="radio" name="newsletter" value="non" /> Non</label>
+        </div>
       </fieldset>
-
-      <br>
 
       <fieldset>
         <legend>Téléversement de fichiers</legend>
 
-        <label for="cv">Téléverser votre CV :</label>
-        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx">
-        <br>
+        <div class="form-group">
+          <label for="cv">Votre CV :</label>
+          <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" />
+        </div>
 
-        <label for="photo">Téléverser une photo :</label>
-        <input type="file" id="photo" name="photo" accept="image/*">
+        <div class="form-group">
+          <label for="photo">Votre photo :</label>
+          <input type="file" id="photo" name="photo" accept="image/*" />
+        </div>
       </fieldset>
-
-      <br>
 
       <fieldset>
         <legend>Commentaire libre</legend>
 
-        <label for="Commentaire">Votre message :</label><br>
-        <textarea id="Commentaire" name="Commentaire" rows="6" cols="60" placeholder="Écrivez ici votre commentaire..."></textarea>
+        <div class="form-group full-width">
+          <label for="Commentaire">Votre message :</label>
+          <textarea
+            id="Commentaire"
+            name="Commentaire"
+            rows="6"
+            placeholder="Écrivez ici votre commentaire..."
+          ></textarea>
+        </div>
       </fieldset>
 
-      <br>
-
-      <input type="submit" value="Envoyer">
-      <input type="reset" value="Réinitialiser">
+      <div class="buttons">
+        <input type="submit" value="Envoyer" />
+        <input type="reset" value="Réinitialiser" />
+      </div>
     </form>
   </body>
 </html>
